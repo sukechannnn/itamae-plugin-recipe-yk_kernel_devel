@@ -13,15 +13,6 @@ if kernel_version != kernel_devel_wrong_version.gsub(/kernel-devel-/, "")
   end
 end
 
-unless run_command("grep exclude=kernel* /etc/yum.conf").stdout.include?('#')
-  file '/etc/yum.conf' do
-    action :edit
-    block do |content|
-      content.gsub!('exclude=kernel*', '# exclude=kernel*')
-    end
-  end
-end
-
 kernel_devel_expected_version = "kernel-devel-#{kernel_version}"
 
 execute "wget \"ftp://mirror.switch.ch/pool/4/mirror/scientificlinux/6.4/x86_64/updates/security/#{kernel_devel_expected_version}.rpm\"" do
