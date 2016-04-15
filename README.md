@@ -1,8 +1,10 @@
+[![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-yk_kernel_devel.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-yk_kernel_devel)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/yosuke0315/itamae-plugin-recipe-yk_kernel_devel/blob/master/LICENSE.txt)
+
 # Itamae::Plugin::Recipe::YkKernelDevel
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/itamae/plugin/recipe/yk_kernel_devel`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Itamae plugin to install kernel-devel.<br>
+This plugin can install the same version of the kernel-devel with your kernel.
 
 ## Installation
 
@@ -22,20 +24,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### install for system
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/itamae-plugin-recipe-yk_kernel_devel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+```rb
+include_recipe "yk_kernel_devel::install"
+```
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+[MIT License](http://opensource.org/licenses/MIT).
