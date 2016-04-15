@@ -15,7 +15,7 @@ end
 
 kernel_devel_expected_version = "kernel-devel-#{kernel_version}"
 
-execute "wget \"ftp://mirror.switch.ch/pool/4/mirror/scientificlinux/6.4/x86_64/updates/security/#{kernel_devel_expected_version}.rpm\"" do
+execute "wget \"ftp://mirror.switch.ch/pool/4/mirror/scientificlinux/#{node[:platform_version]}/x86_64/os/Packages/#{kernel_devel_expected_version}.rpm\"" do
   not_if 'rpm -qa | grep kernel-devel'
   not_if 'ls | grep kernel-devel'
 end
