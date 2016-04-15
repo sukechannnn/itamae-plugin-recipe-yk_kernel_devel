@@ -4,7 +4,8 @@
 # Itamae::Plugin::Recipe::YkKernelDevel
 
 Itamae plugin to install kernel-devel.<br>
-This plugin can install the same version of the kernel-devel with your kernel.
+This plugin can install the same version of the kernel-devel with your kernel.<br>
+This is available only on redhat.
 
 ## Installation
 
