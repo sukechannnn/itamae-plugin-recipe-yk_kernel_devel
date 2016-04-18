@@ -20,7 +20,7 @@ unless run_command("grep exclude=kernel* /etc/yum.conf").stdout.include?('#')
   file '/etc/yum.conf' do
     action :edit
     block do |content|
-      content.gsub!('# exclude=kernel*', 'exclude=kernel*')
+      content.gsub!('exclude=kernel*', '# exclude=kernel*')
     end
   end
 end
