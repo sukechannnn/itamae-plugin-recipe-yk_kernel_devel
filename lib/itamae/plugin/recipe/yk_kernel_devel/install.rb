@@ -58,3 +58,12 @@ local_ruby_block 'check kernel-devel install' do
     end
   end
 end
+
+if run_command("grep exclude=kernel* /etc/yum.conf").stdout.include?('#')
+  file '/etc/yum.conf' do
+    action :edit
+    block do |content|
+      content.gsub!('# exclude=kernel*', 'exclude=kernel*')
+    end
+  end
+end
